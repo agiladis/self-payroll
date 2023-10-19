@@ -44,6 +44,10 @@ func (c *companyRepository) CreateOrUpdate(ctx context.Context, company *model.C
 	}
 
 	// TODO: tuliskan baris code untuk update data company
+	if err := c.Cfg.Database().WithContext(ctx).Model(&model.Company{ID: company.ID}).
+		Updates(company).Error; err != nil {
+		return nil, err
+	}
 
 	return companyModel, nil
 }

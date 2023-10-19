@@ -69,7 +69,7 @@ func (comp *companyDelivery) UpdateOrCreateCompanyHandler(e echo.Context) error 
 func (comp *companyDelivery) TopupBalanceHandler(e echo.Context) error {
 	ctx := e.Request().Context()
 
-	//TODO: lakukan validasi request disini
+	//TODO DONE: lakukan validasi request disini
 	var req request.TopupCompanyBalance
 
 	if err := e.Bind(&req); err != nil {
