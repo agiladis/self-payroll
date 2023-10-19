@@ -23,7 +23,7 @@ func NewCompanyDelivery(companyUsecase model.CompanyUsecase) CompanyDelivery {
 
 func (comp *companyDelivery) Mount(group *echo.Group) {
 
-	// TODO:
+	// TODO DONE:
 	// 1. Buatlah handler yang mengarah ke fungsi comp.GetDetailCompanyHandler
 	// 2. Buatlah handler yang mengarah ke fungsi comp.UpdateOrCreateCompanyHandler
 	group.GET("", comp.GetDetailCompanyHandler)
